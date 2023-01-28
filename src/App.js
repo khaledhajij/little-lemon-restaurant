@@ -1,12 +1,11 @@
-import './App.css';
+import "./App.css";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
-    <div>
-    <p>Little lemon website</p>
-    <p>Little lemon website</p>
-    <p>Little lemon website</p>
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 }
 
