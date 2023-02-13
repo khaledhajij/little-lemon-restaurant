@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 .myContainer {
-  margin: 0px 200px;
+  margin: 0px 15%;
 }
 
 .btn,
@@ -17,6 +17,12 @@
   border-color: black;
 }
 
+.navbar {
+  display: flex;
+}
+.navbar .humberger, .navbar > img {
+  display: none;
+}
 .navbar ul {
   display: flex;
   list-style: none;
@@ -24,6 +30,31 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+@media (max-width: 750px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar img,
+  .navbar .humberger {
+    display: block;
+  }
+  .navbar .humberger:hover + ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    z-index: 1;
+    background-color: white;
+    padding: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    right: -40px;
+  }
+  .navbar .humberger:hover + ul img {
+    display: none;
+  }
 }
 
 .Hero {
@@ -34,19 +65,38 @@
   position: relative;
   display: flex;
 }
+@media (max-width: 750px) {
+  .Hero div.myContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
 .Hero div.myContainer > div {
   width: 50%;
   color: black;
 }
+@media (max-width: 750px) {
+  .Hero div.myContainer > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .Hero div.myContainer img {
-  height: 280px;
+  height: 180px;
   position: absolute;
   border-radius: 12px;
-  width: 250px;
+  width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   right: 0px;
   top: 50%;
+}
+@media (max-width: 750px) {
+  .Hero div.myContainer img {
+    position: relative;
+  }
 }
 
 .Highlights {
@@ -72,12 +122,22 @@
   display: flex;
   gap: 30px;
 }
+@media (max-width: 750px) {
+  .Highlights .cards {
+    flex-direction: column;
+  }
+}
 .Highlights .cards .card {
   width: 33%;
   display: flex;
   justify-content: space-between;
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
+}
+@media (max-width: 750px) {
+  .Highlights .cards .card {
+    width: 100%;
+  }
 }
 .Highlights .cards .card img {
   height: 200px;
@@ -104,7 +164,8 @@
 
 .Testimonials {
   background-color: #d9d9d9;
-  height: 560px;
+  min-height: 560px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -118,6 +179,13 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 750px) {
+  .Testimonials .Testimonials-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
 .Testimonials .Testimonials-cards .testimonial {
   font-family: karla;
   display: flex;
@@ -127,6 +195,11 @@
   width: 225px;
   height: 200px;
   padding: 10px;
+}
+@media (max-width: 750px) {
+  .Testimonials .Testimonials-cards .testimonial {
+    width: 200px;
+  }
 }
 .Testimonials .Testimonials-cards .testimonial .rating {
   display: flex;
@@ -153,9 +226,22 @@
 .About {
   margin: 250px 0px;
 }
+@media (max-width: 750px) {
+  .About {
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+}
 .About .myContainer {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 750px) {
+  .About .myContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .About .myContainer .images {
   position: relative;
@@ -173,6 +259,11 @@
 }
 .About .myContainer .text {
   width: 50%;
+}
+@media (max-width: 750px) {
+  .About .myContainer .text {
+    width: 100%;
+  }
 }
 .About .myContainer .text p:nth-of-type(1) {
   font-family: "markazi text";
@@ -210,4 +301,19 @@
 }
 .Footer .myContainer > div ul li {
   list-style: none;
+}
+
+.BookingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.BookingPage .navbar {
+  width: 80%;
+}
+
+.BookingForm {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=customStyling.css.map */

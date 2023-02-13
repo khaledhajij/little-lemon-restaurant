@@ -1,5 +1,6 @@
 import React from "react";
-import heroImage from "../images/icons_assets/restauranfood.jpg"
+import { Link } from "react-router-dom";
+import heroImage from "../images/icons_assets/restauranfood.jpg";
 const Hero = () => {
   return (
     <div className="Hero">
@@ -13,7 +14,9 @@ const Hero = () => {
             ullam magni esse eveniet eos perspiciatis nam, architecto
             repellendus eum expedita, itaque qui?
           </p>
-          <button className="btn btn-primary">Reverse a Table</button>
+          <Link to="/book-a-table">
+            <button className="btn btn-primary">Reverse a Table</button>
+          </Link>
         </div>
         <img src={heroImage} alt="" />
       </div>

@@ -8,22 +8,13 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import BookingForm from "./Components/BookingForm";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/book-a-table",
-    element: <BookingForm />,
-  },
-]);
+import BookingPage from "./Components/BookingPage";
+import Main from "./Components/Main";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Main />
   </React.StrictMode>
 );
 
