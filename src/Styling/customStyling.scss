@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Markazi+Text:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+.myContainer {
+  margin: 0px 200px;
+}
+
+.btn,
+.btn:hover {
+  background-color: #f4ce14;
+  border-color: black;
+  color: black;
+  &:active {
+    background-color: #f4ce14;
+    border-color: black;
+  }
+}
+.navbar {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+.Hero {
+  background-color: #495e57;
+  padding: 30px 0px;
+  div.myContainer {
+    position: relative;
+    display: flex;
+    & > div {
+      width: 50%;
+      color: black;
+    }
+    img {
+      height: 280px;
+      position: absolute;
+      border-radius: 12px;
+      width: 250px;
+      object-fit: cover;
+      right: 0px;
+      top: 50%;
+    }
+  }
+}
+.Highlights {
+  margin: 160px 0px;
+  .header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      border: none;
+      padding: 8px 15px;
+      height: fit-content;
+    }
+    & > p {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: karla;
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 30px;
+    .card {
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px 10px 0px 0px;
+      overflow: hidden;
+      img {
+        height: 200px;
+        object-fit: cover;
+      }
+      & > div {
+        padding: 10px;
+      }
+      .title-price {
+        display: flex;
+        justify-content: space-between;
+        .title {
+          font-weight: 600;
+          font-family: markzi text;
+          font-size: 20px;
+        }
+        .price {
+          color: #ee9972;
+          font-weight: bold;
+          font-family: karla;
+        }
+      }
+    }
+  }
+}
+.Testimonials {
+  background-color: #d9d9d9;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  & > p {
+    font-family: "markazi text";
+    font-size: 36px;
+    text-align: center;
+  }
+  .Testimonials-cards {
+    display: flex;
+    justify-content: space-between;
+    .testimonial {
+      font-family: karla;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: white;
+      width: 225px;
+      height: 200px;
+      padding: 10px;
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        .rating-value {
+          width: fit-content;
+          color: gold;
+        }
+      }
+      .img-name {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        p {
+          margin-bottom: 0px;
+        }
+        img {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+.About {
+  margin: 250px 0px;
+  .myContainer {
+    display: flex;
+    justify-content: space-between;
+    .images {
+      position: relative;
+      img {
+        height: 240px;
+        width: 175px;
+        object-fit: cover;
+        &:nth-of-type(1) {
+          position: absolute;
+          top: 50%;
+          right: 50%;
+        }
+      }
+    }
+    .text {
+      width: 50%;
+      p {
+        &:nth-of-type(1) {
+          font-family: "markazi text";
+          font-size: 50px;
+        }
+        &:nth-of-type(2) {
+          font-family: "markazi text";
+          font-size: 36px;
+        }
+        &:nth-of-type(3) {
+          font-family: "karla";
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.Footer {
+  padding: 20px 0px;
+  font-family: "karla";
+  background-color: #d9d9d9;
+  .myContainer {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: 33%;
+      p{
+        font-weight: bolder;
+      }
+      ul {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

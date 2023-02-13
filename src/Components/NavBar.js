@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from '../images/icons_assets/Logo.svg'
-import '../Styling/NavBar.css'
 const NavBar = () => {
   const navElements = [
     "Home",
